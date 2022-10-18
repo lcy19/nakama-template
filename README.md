@@ -44,7 +44,15 @@ The bundled JavaScript code output can be found in "build/index.js".
 
 The recommended workflow is to use Docker and the compose file to build and run the game server and database resources.
 
+为了方便查询代码的修改，将修改后生成的index文件置于外部，再通过docker-compose文件挂载
 ```shell
+# ./postgresql_data 为postgresql容器挂载路径
+mkdir -p  ./postgresql_data
+# ./data 为nakama容器挂载路径(具体看docker-compose.yml 以及my-config.yml)
+mkdir -p  ./data/modules
+# 配置脚本
+./sync.sh
+
 docker compose up --build nakama
 ```
 

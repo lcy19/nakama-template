@@ -1,16 +1,14 @@
 {
   "files": [
-    "./main.ts",
-    "./daily_rewards.ts",
-    "./messages.ts",
-    "./match_handler.ts",
-    "./match_rpc.ts"
+    "./src/main.ts",
+    "./src/daily_rewards.ts",
+    "./src/messages.ts",
+    "./src/match_handler.ts",
+    "./src/match_rpc.ts"
   ],
   "compilerOptions": {
     "target": "es5",
-    "typeRoots": [
-      "./node_modules"
-    ],
+    "typeRoots": ["./node_modules"],
     "outFile": "./build/index.js",
     "strict": true,
     "esModuleInterop": true,

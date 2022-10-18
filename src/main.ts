@@ -12,23 +12,28 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const rpcIdRewards = 'rewards_js';
-const rpcIdFindMatch = 'find_match_js';
+const rpcIdRewards = "rewards_js";
+const rpcIdFindMatch = "find_match_js";
 
-function InitModule(ctx: nkruntime.Context, logger: nkruntime.Logger, nk: nkruntime.Nakama, initializer: nkruntime.Initializer) {
-    initializer.registerRpc(rpcIdRewards, rpcReward);
+function InitModule(
+  ctx: nkruntime.Context,
+  logger: nkruntime.Logger,
+  nk: nkruntime.Nakama,
+  initializer: nkruntime.Initializer
+) {
+  initializer.registerRpc(rpcIdRewards, rpcReward);
 
-    initializer.registerRpc(rpcIdFindMatch, rpcFindMatch);
+  initializer.registerRpc(rpcIdFindMatch, rpcFindMatch);
 
-    initializer.registerMatch(moduleName, {
-        matchInit,
-        matchJoinAttempt,
-        matchJoin,
-        matchLeave,
-        matchLoop,
-        matchTerminate,
-        matchSignal,
-    });
+  initializer.registerMatch(moduleName, {
+    matchInit,
+    matchJoinAttempt,
+    matchJoin,
+    matchLeave,
+    matchLoop,
+    matchTerminate,
+    matchSignal,
+  });
 
-    logger.info('JavaScript logic loaded.');
+  logger.info("JavaScript logic loaded. good night, lcy");
 }
